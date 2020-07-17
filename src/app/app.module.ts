@@ -10,6 +10,9 @@ import { ExponentialPipe } from './exponential.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { ProductsComponent } from './products/products.component';
     ProductsComponent,
     ContactComponent,
     DemoComponent,
+    HeaderComponent,
+    FooterComponent,
+    BannerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
