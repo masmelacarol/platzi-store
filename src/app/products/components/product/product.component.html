@@ -3,5 +3,5 @@
 <p>{{product.description | slice:0:20}}</p>
 <p><small>{{product.price| currency}}</small></p>
 <p><small>{{today | date:'HH:mm'}}</small></p>
-<button class="btn" (click)="addCart()">Add Cart</button>
-<a routerLink="/products/{{product.id}}">Details</a>
+<button mat-stroked-button color="primary" (click)="addCart()">Add Cart</button>
+<a mat-stroked-button routerLink="/products/{{product.id}}">Details</a>
