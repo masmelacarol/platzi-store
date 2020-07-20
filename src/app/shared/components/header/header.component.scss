@@ -1,16 +1,10 @@
-nav {
-  &>ul {
-    display: flex;
-    justify-content: space-evenly;
-  }
+.header-row {
+  width: 100%;
 
-  a {
-    text-decoration: none;
-    color: #343434;
-    padding: 5px;
-  }
-
-  .active {
-    color: blue;
+  nav {
+    .active {
+      // color: blue;
+      text-decoration: underline;
+    }
   }
 }
