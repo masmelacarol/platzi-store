@@ -8,3 +8,9 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .mat-toolbar-row {
+    height: 85px;
+  }
+}

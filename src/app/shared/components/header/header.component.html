@@ -1,14 +1,14 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <section class="row between-xs middle-xs header-row">
-      <nav>
+      <nav class="col-md-9">
         <ul>
           <a mat-button [routerLink]="['/home']" routerLinkActive="active">Home</a>
           <a mat-button routerLink="/products" routerLinkActive="active">Products</a>
           <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
         </ul>
       </nav>
-      <a mat-raised-button matBadge="5" matBadgeColor="accent">
+      <a class="col-md-2" mat-raised-button matBadge="5" matBadgeColor="accent">
         <mat-icon aria-hidden="false" aria-label="shopping cart icon">shopping_cart</mat-icon>
         Carrito
       </a>
