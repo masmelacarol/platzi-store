@@ -1,11 +1,16 @@
-<figure>
-  <img [src]="product.image" alt="producto {{product.id}}">
-</figure>
-<section>
-  <ul>
-    <li>Nombre: {{product.title}}</li>
-    <li>Precio: {{product.price | currency}}</li>
-  </ul>
-  <p>Descripción: {{product.description}}</p>
+<section *ngIf="product">
+  <figure>
+    <img [src]="product.image" alt="producto {{product.id}}">
+  </figure>
+  <section>
+    <ul>
+      <li>Nombre: {{product.title}}</li>
+      <li>Precio: {{product.price | currency}}</li>
+    </ul>
+    <p>Descripción: {{product.description}}</p>
+  </section>
+  <button mat-raised-button (click)="createProduct()">Create product</button>
+  <button mat-raised-button (click)="updateProduct()">Edit product</button>
+  <button mat-raised-button (click)="deleteProduct()">Delete product</button>
+  <a mat-raised-button routerLink="/products">Back</a>
 </section>
-<a routerLink="/products">Back</a>
