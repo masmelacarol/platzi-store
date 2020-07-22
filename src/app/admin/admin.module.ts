@@ -9,6 +9,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { TableComponent } from './components/table/table.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { FormProductComponent } from './components/form-product/form-product.com
     ListProductsComponent,
     TableComponent,
     FormProductComponent,
+    EditProductComponent,
   ],
   imports: [CommonModule, AdminRoutingModule, MaterialModule, SharedModule],
 })

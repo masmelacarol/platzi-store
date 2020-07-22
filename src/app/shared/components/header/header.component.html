@@ -8,7 +8,7 @@
           <a mat-button routerLink="/contact" routerLinkActive="active">Contact</a>
         </ul>
       </nav>
-      <a class="col-md-2" mat-raised-button matBadge="5" matBadgeColor="accent">
+      <a class="col-md-2" mat-raised-button [matBadge]="total" matBadgeColor="accent">
         <mat-icon aria-hidden="false" aria-label="shopping cart icon">shopping_cart</mat-icon>
         Carrito
       </a>

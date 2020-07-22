@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 import { FormProductComponent } from './components/form-product/form-product.component';
 import { ListProductsComponent } from './components/list-products/list-products.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'products/create',
         component: FormProductComponent,
+      },
+      {
+        path: 'products/edit/:id',
+        component: EditProductComponent,
       },
     ],
   },
