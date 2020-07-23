@@ -7,6 +7,7 @@ import { MaterialModule } from '../material/material.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
+import { CountPipe } from './pipes/count/count.pipe';
 import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 
 @NgModule({
@@ -15,12 +16,14 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
+    CountPipe,
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
     ExponentialPipe,
     HighlightDirective,
+    CountPipe,
   ],
   imports: [CommonModule, RouterModule, MaterialModule, ReactiveFormsModule],
 })

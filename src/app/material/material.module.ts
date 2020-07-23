@@ -16,6 +16,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
+import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -41,6 +42,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
+    MatStepperModule,
   ],
   exports: [
     MatButtonModule,
@@ -61,6 +63,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
+    MatStepperModule,
   ],
 })
 export class MaterialModule {}
