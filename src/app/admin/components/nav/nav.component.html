@@ -3,13 +3,11 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/admin/create">Crear producto</a>
       <a mat-list-item routerLink="/admin">Home</a>
-      <a mat-list-item routerLink="/admin/table">Inventario</a>
       <a mat-list-item routerLink="/admin/products">Productos</a>
-      <a mat-list-item routerLink="/admin/products/create">
-        <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-      </a>
+      <a mat-list-item routerLink="/admin/create">Crear producto</a>
+      <button mat-list-item (click)="logOut()">Logout</button>
+
 
     </mat-nav-list>
   </mat-sidenav>
