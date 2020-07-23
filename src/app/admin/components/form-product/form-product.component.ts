@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ProductsService } from '@core/services/products/products.service';
+import { ValidatorProduct } from '@utils/validators';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { ProductsService } from 'src/app/core/services/products/products.service';
-import { ValidatorProduct } from '../../../utils/validators';
 @Component({
   selector: 'app-form-product',
   templateUrl: './form-product.component.html',

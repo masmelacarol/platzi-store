@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Product } from 'src/app/core/models/product/product.model';
+import { Product } from '@core/models/product/product.model';
 
 @Pipe({
   name: 'count',

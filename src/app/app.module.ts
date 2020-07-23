@@ -6,13 +6,13 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { environment } from 'src/environments/environment';
+import { CoreModule } from '@core/core.module';
+import { environment } from '@environments/environment';
+import { SharedModule } from '@shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './core/core.module';
 //
 import { LayoutComponent } from './layout/layout.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent],
