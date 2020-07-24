@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
@@ -12,9 +12,9 @@ import * as Sentry from '@sentry/browser';
 import { SharedModule } from '@shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthInterceptor } from './auth.interceptor';
 //
 import { LayoutComponent } from './layout/layout.component';
-
 Sentry.init({
   dsn:
     'https://665e9a98e7394640a99d85b54f103387@o425149.ingest.sentry.io/5357897',
@@ -34,7 +34,13 @@ Sentry.init({
     AngularFireAuthModule,
     AngularFireStorageModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
