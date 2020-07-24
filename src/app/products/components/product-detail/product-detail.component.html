@@ -1,4 +1,4 @@
-<section *ngIf="product">
+<section *ngIf="(product$ | async) as product">
   <figure>
     <img [src]="product.image" alt="producto {{product.id}}">
   </figure>
