@@ -8,11 +8,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from '@core/core.module';
 import { environment } from '@environments/environment';
+import * as Sentry from '@sentry/browser';
 import { SharedModule } from '@shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //
 import { LayoutComponent } from './layout/layout.component';
+
+Sentry.init({
+  dsn:
+    'https://665e9a98e7394640a99d85b54f103387@o425149.ingest.sentry.io/5357897',
+});
 
 @NgModule({
   declarations: [AppComponent, LayoutComponent],

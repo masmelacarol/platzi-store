@@ -1,16 +1,19 @@
-<section *ngIf="(product$ | async) as product">
+<section *ngIf="product$ | async as product">
   <figure>
-    <img [src]="product.image" alt="producto {{product.id}}">
+    <img [src]="product.image" alt="producto {{ product.id }}" />
   </figure>
   <section>
     <ul>
-      <li>Nombre: {{product.title}}</li>
-      <li>Precio: {{product.price | currency}}</li>
+      <li>Nombre: {{ product.title }}</li>
+      <li>Precio: {{ product.price | currency }}</li>
     </ul>
-    <p>Descripción: {{product.description}}</p>
+    <p>Descripción: {{ product.description }}</p>
   </section>
   <button mat-raised-button (click)="createProduct()">Create product</button>
   <button mat-raised-button (click)="updateProduct()">Edit product</button>
   <button mat-raised-button (click)="deleteProduct()">Delete product</button>
+  <button mat-raised-button (click)="getRandomUser()">Get Ramndom</button>
+  <button mat-raised-button (click)="getFile()">Get file</button>
+
   <a mat-raised-button routerLink="/products">Back</a>
 </section>

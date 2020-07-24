@@ -33,6 +33,14 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  loginAPI() {
+    this.authService
+      .loginRestAPI('carolstefannym@gmail.com', '123456')
+      .subscribe((data) => {
+        console.log('LoginComponent -> loginAPI -> data', data);
+      });
+  }
+
   private buildForm() {
     this.form = this.formBuilder.group({
       email: ['', [Validators.required]],
