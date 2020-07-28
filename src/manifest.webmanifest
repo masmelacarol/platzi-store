@@ -1,13 +1,12 @@
 {
-  "name": "platzi-store",
-  "short_name": "platzi-store",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Platzi Store",
+  "short_name": "Platzi Store",
+  "theme_color": "#bbbbbb",
+  "background_color": "#fcfcfc",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
-  "icons": [
-    {
+  "icons": [{
       "src": "assets/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
