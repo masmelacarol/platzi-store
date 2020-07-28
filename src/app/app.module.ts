@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { AuthInterceptor } from './auth.interceptor';
 //
 import { LayoutComponent } from './layout/layout.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 Sentry.init({
   dsn:
     'https://665e9a98e7394640a99d85b54f103387@o425149.ingest.sentry.io/5357897',
@@ -33,6 +34,7 @@ Sentry.init({
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFireStorageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     {
