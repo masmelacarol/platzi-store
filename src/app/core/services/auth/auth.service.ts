@@ -35,7 +35,7 @@ export class AuthService {
   }
   loginRestAPI(email: string, password: string) {
     return this.http
-      .post('http://platzi-store.herokuapp.com/auth', {
+      .post('https://platzi-store.herokuapp.com/auth', {
         email,
         password,
       })
