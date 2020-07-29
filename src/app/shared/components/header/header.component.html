@@ -9,7 +9,7 @@
         </ul>
       </nav>
       <div class="col-md-2">
-        <a mat-button (click)="installByUser()" class="mr">Install App</a>
+        <a mat-button (click)="installByUser()" *ngIf="installEvent" class="mr">Install App</a>
         <a routerLink="order" mat-raised-button [matBadge]="total$ | async" matBadgeColor="accent">
           <mat-icon aria-hidden="false" aria-label="shopping cart icon">shopping_cart</mat-icon>
           Carrito
