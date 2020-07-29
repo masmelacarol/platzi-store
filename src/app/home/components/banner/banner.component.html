@@ -1,4 +1,4 @@
-<div class="swiper-container">
+<div [swiper]="config" class="swiper-container banner">
   <div class="swiper-wrapper">
     <div class="swiper-slide" *ngFor="let img of images; index as i">
       <img [src]="img" [alt]="'imagen de banner '+ (i+1)">

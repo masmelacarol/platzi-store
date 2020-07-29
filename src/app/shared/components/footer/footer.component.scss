@@ -7,13 +7,26 @@ footer {
   margin-top: 20px;
   background-color: mat-color($primary);
 
+  .mat-form-field {
+    input {
+      &::placeholder {
+        color: white;
+      }
+    }
+  }
+
   .box {
     h3 {
       color: white;
     }
 
-    input {
+    .input-email {
       color: white;
+      border-color: white !important;
+
+      &::placeholder {
+        color: white !important;
+      }
     }
 
     ul {

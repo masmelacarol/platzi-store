@@ -30,7 +30,7 @@
         <div class="box">
           <h3>Contacto</h3>
           <mat-form-field color="accent" class="full-width">
-            <input [formControl]="emailField" matInput placeholder="Su correo" type="email">
+            <input [formControl]="emailField" matInput class="input-email" placeholder="Su correo" type="email">
           </mat-form-field>
           <button (click)="sendMail()" [disabled]="emailField.invalid" mat-raised-button
             color="accent">Suscribirse</button>

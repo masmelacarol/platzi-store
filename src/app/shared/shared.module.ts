@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@material/material.module';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 //
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,7 +25,14 @@ import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
     ExponentialPipe,
     HighlightDirective,
     CountPipe,
+    SwiperModule,
   ],
-  imports: [CommonModule, RouterModule, MaterialModule, ReactiveFormsModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    SwiperModule,
+  ],
 })
 export class SharedModule {}
