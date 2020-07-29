@@ -24,7 +24,9 @@
               "@firebase/util",
               "@firebase/component",
               "@firebase/auth",
-              "angularfire2/auth"
+              "@firebase/firestore",
+              "angularfire2/auth",
+              "file-saver"
             ],
             "outputPath": "dist/platzi-store",
             "index": "src/index.html",
@@ -35,7 +37,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/firebase-messaging-sw.js"
             ],
 
             "styles": [
@@ -44,7 +47,9 @@
               "./node_modules/swiper/swiper-bundle.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           },
           "configurations": {
             "production": {

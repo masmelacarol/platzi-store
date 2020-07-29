@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
   }
   requestPermission() {
     this.messaging.requestToken.subscribe((token) => {
+      console.log('AppComponent -> requestPermission -> token', token);
       this.tokensCollections.add({ token });
     });
   }
