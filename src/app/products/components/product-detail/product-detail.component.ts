@@ -79,7 +79,6 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.getFile().subscribe((content) => {
       const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
       saveAs(blob, 'file.txt');
-      console.log('ProductDetailComponent -> getFile -> content', content);
     });
   }
 }

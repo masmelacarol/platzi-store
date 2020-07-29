@@ -30,10 +30,6 @@ export class FormProductComponent implements OnInit {
     if (this.form.valid) {
       const product = this.form.value;
       this.productService.createProduct(product).subscribe((newProduct) => {
-        console.log(
-          'FormProductComponent -> saveProduct -> newProduct',
-          newProduct
-        );
         this.router.navigate(['/admin/products']);
       });
     }
@@ -55,7 +51,6 @@ export class FormProductComponent implements OnInit {
 
   uploadFile(event) {
     const file = event.target.files[0];
-    console.log('FormProductComponent -> uploadFile -> file', file);
     const name = file.name;
     const fileRef = this.angularFireStorage.ref(name);
     const task = this.angularFireStorage.upload(name, file);
@@ -65,7 +60,6 @@ export class FormProductComponent implements OnInit {
         finalize(() => {
           this.image$ = fileRef.getDownloadURL();
           this.image$.subscribe((url) => {
-            console.log('FormProductComponent -> uploadFile -> url', url);
             this.form.get('image').setValue(url);
           });
         })

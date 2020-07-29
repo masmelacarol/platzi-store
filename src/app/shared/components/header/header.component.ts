@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
   onBeforeInstallPrompt(event): void {
     event.preventDefault();
     this.installEvent = event;
-    console.log('AppComponent -> onBeforeInstallPrompt -> event', event);
   }
 
   installByUser(): void {

@@ -6,13 +6,13 @@ export const environment = {
   production: false,
   url_api: 'https://platzi-store.herokuapp.com/products',
   firebase: {
-    apiKey: 'AIzaSyAkcOYduwvxBFGx3T8k96j2Veu00pIAqbU',
-    authDomain: 'platzi-store-master.firebaseapp.com',
-    databaseURL: 'https://platzi-store-master.firebaseio.com',
-    projectId: 'platzi-store-master',
-    storageBucket: 'platzi-store-master.appspot.com',
-    messagingSenderId: '763128926262',
-    appId: '1:763128926262:web:7588e93eab67fe96240897',
+    apiKey: 'AIzaSyCMSoRfnVB2dY-ypC-TBntqFUzD1em9Phk',
+    authDomain: 'platzi-store-pwa-master.firebaseapp.com',
+    databaseURL: 'https://platzi-store-pwa-master.firebaseio.com',
+    projectId: 'platzi-store-pwa-master',
+    storageBucket: 'platzi-store-pwa-master.appspot.com',
+    messagingSenderId: '602110461240',
+    appId: '1:602110461240:web:e6a2ba7711c7161dd4edcd',
   },
 };
 

@@ -26,7 +26,6 @@ export class NavComponent {
 
   logOut() {
     this.authService.logOut().then(() => {
-      console.log('exito');
       this.router.navigate(['/home']);
     });
   }
