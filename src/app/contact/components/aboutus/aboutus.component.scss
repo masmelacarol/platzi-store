@@ -1,0 +1,26 @@
+.about {
+  padding-top: 10px;
+
+  &__container {
+    &--title {
+      text-align: center;
+    }
+
+    &--image {
+      width: 100%;
+      margin-bottom: 10px;
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+
+      }
+    }
+
+    &--text {
+      margin-top: 10px;
+      line-height: 2.5;
+    }
+  }
+
+}

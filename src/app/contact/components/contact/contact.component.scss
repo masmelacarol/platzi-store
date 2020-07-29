@@ -1,0 +1,21 @@
+.contact {
+  padding-top: 10px;
+
+  &__container {}
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    &--image {
+      text-align: center;
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 15px;
+      }
+    }
+  }
+}

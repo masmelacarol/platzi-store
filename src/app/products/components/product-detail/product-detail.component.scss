@@ -1,3 +1,47 @@
-img {
-  width: 100%;
+.detail {
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 2px 6px #a6a6a6;
+    border-radius: 15px;
+    margin-bottom: 20px;
+
+    @media (max-width:768px) {
+      padding: 20px;
+      grid-template-columns: 1fr;
+    }
+
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    gap: 10px;
+
+    button {
+      display: block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
 }

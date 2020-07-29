@@ -1,3 +1,32 @@
 <section class="contact">
-  hola
+  <div class="contact__container">
+    <h2 class="contact__title">Contacto</h2>
+    <div class="contact__content">
+      <figure class="contact__content--image">
+        <img src="assets/images/banner-3.png" alt="Contactanos">
+      </figure>
+      <div class="contact__content--form">
+        <form [formGroup]="form" (ngSubmit)="sendEmail($event)">
+          <div class="row">
+            <mat-form-field class="col-xs">
+              <input formControlName="name" matInput type="text" placeholder="Tu nombre">
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col-xs">
+              <input formControlName="email" matInput type="email" placeholder="Tu correo eléctronico">
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <mat-form-field class="col-xs">
+              <textarea formControlName="message" matInput placeholder="Escribe tu mensaje"></textarea>
+            </mat-form-field>
+          </div>
+          <div class="row">
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
