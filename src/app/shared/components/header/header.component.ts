@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CartService } from '@core/services/cart/cart.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  installEvent = null;
   total$: Observable<number>;
   constructor(private cartService: CartService) {
     this.total$ = this.cartService.cart$.pipe(
@@ -16,4 +17,18 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event): void {
+    event.preventDefault();
+    this.installEvent = event;
+    console.log('AppComponent -> onBeforeInstallPrompt -> event', event);
+  }
+
+  installByUser(): void {
+    if (this.installEvent) {
+      this.installEvent.prompt();
+      this.installEvent.userChoice.then((rta) => console.log(rta));
+    }
+  }
 }
